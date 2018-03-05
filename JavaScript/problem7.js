@@ -1,11 +1,11 @@
-const num = 100000;
+const num = 1000000;
 let array = new Array(num).fill(true);
 
 
 const findPrimes = () => {
     for (let i = 2; i < Math.sqrt(num); i++) {
+        let counter = Math.pow(i, 2);
         if (array[i]) {
-            let counter = i^2;
             while(counter < num) {
                 array[counter] = false;
                 counter += i;
@@ -14,7 +14,7 @@ const findPrimes = () => {
     }
 
     const primeArray = [];
-    for (let i = 1; i < num; i++) {
+    for (let i = 0; i < num; i++) {
         if (array[i]) {
             primeArray.push(i);
         }
@@ -24,3 +24,4 @@ const findPrimes = () => {
 };
 
 console.log(findPrimes()[10000]);
+//console.log(findPrimes());
