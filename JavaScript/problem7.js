@@ -14,7 +14,7 @@ const findPrimes = () => {
     }
 
     const primeArray = [];
-    for (let i = 0; i < num; i++) {
+    for (let i = 2; i < num; i++) {
         if (array[i]) {
             primeArray.push(i);
         }
@@ -24,4 +24,3 @@ const findPrimes = () => {
 };
 
 console.log(findPrimes()[10000]);
-//console.log(findPrimes());
